@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: "Work Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Header & Nav */
+
+header {
+  display: flex;
+  height: 10rem;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 3rem;
+  max-width: 102rem;
+  font-size: 1.7rem;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+header img {
+  height: 3rem;
+}
+
+li {
+  list-style: none;
+}
+
+.header-nav ul {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Main Content */
+
+main {
+  /* viewport height - header height - footer height */
+  min-height: calc(100vh - 10rem - 8rem);
+  max-width: 102rem;
+  margin: 0 auto;
+}
+
+/* Intro Text */
+.hero {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 3rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.intro {
+  font-size: 1.6rem;
+  font-weight: 100;
+  margin-bottom: 4rem;
+}
+
+/* Button Styling */
+
+.hero a.button {
+  align-self: flex-end;
+}
+
+a.button {
+  text-transform: uppercase;
+  background: #000;
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 1rem 3rem;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 5px;
+}
+a.button:hover {
+  transform: scale(1.05);
+}
+
+.article-section {
+  padding: 0 3rem;
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: left;
+  padding-bottom: 2vh;
+}
+
+article {
+  height: 40rem;
+  width: 30rem;
+  padding: 30px;
+  font-size: 12px;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+.article-1:hover {
+  transform: scale(1.05);
+}
+.article-2:hover {
+  transform: scale(1.05);
+}
+.article-3:hover {
+  transform: scale(1.05);
+}
+.article-1 {
+  background-image: url("./images/Bildschirmfoto\ vom\ 2024-10-07\ 19-32-04.png");
+}
+
+.article-2 {
+  background-image: url("./images/0df81f02-aef7-4501-a18e-574a3728676f.__CR0\,0\,600\,450_PT0_SX600_V1___.jpg");
+}
+
+.article-3 {
+  background-image: url("./images/Bildschirmfoto\ vom\ 2024-10-07\ 19-33-17.png");
+}
+
+.article-4 {
+  background-image: url("./images/Beosound_A9_5th_Gen._0010_Sound_And_Vision_For_Your_Home_364bff60-b4a1-4be7-b139-3f046200e5c4.webp");
+}
+
+.article-5 {
+  background-image: url("./images/sound5.png");
+}
+
+.article-6 {
+  background-image: url("./images/sound6.png");
+}
+
+.article-7 {
+  background-image: url("./images/sound7.jpg");
+}
+.article-8 {
+  background-image: url("./images/IMG_2865.jpg");
+}
+.article-9 {
+  background-image: url("./images/Beosound_Shape_-_0100_-_Image.jpg");
+}
+
+
+article h2 {
+  padding-right: 4rem;
+}
+.article-1 > h2 {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.3rem;
+}
+.article-2 > h2 {
+  color: white;
+  bbackground-color: rgba(0, 0, 0, 1);
+  padding: 0.3rem;
+}
+.article-3 > h2 {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.3rem;
+}
+.article- > h2 {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.3rem;
+}
+
+.article-4 > h2 {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.3rem;
+}
+
+.article-5 > h2 {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.3rem;
+}
+
+.article-6 > h2 {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.3rem;
+}
+
+.article-7 > h2 {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.3rem;
+}
+
+.article-8 > h2 {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.3rem;
+}
+
+.article-4 > h2 {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.3rem;
+}
+
+.article-section .icon {
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background: #fff;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  color: black;
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+
+article {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+article.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8rem;
+  font-size: 1.5rem;
+  background: black;
+  color: white;
+ margin-top: 10vh;
+}

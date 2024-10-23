@@ -23,14 +23,16 @@ header {
   align-items: center;
   margin: 0 auto;
   padding: 0 3rem;
-  max-width: 102rem;
+  max-width: 100vw;
   font-size: 1.7rem;
+  border: px solid red;
 }
 
 .header-logo {
   display: flex;
   align-items: center;
   gap: 1.4rem;
+  margin-left: 10vw;
 }
 
 header img {
@@ -44,21 +46,41 @@ li {
 .header-nav ul {
   display: flex;
   gap: 2rem;
+  margin-right: 10vw;
 }
 
-/* Main Content */
-
-main {
-  /* viewport height - header height - footer height */
-  min-height: calc(100vh - 8rem - 6rem);
-  max-width: 102rem;
-  margin: 0 auto;
+.oben {
+  background-image: url(./images/hero.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
 }
 
 .hero {
+  margin: 0 auto;
+  padding: 5rem 3rem;
+  max-width: 100vw;
+  font-size: 2.7rem;
   display: flex;
   flex-direction: column;
-  padding: 5rem 3rem;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+.hero h1,
+.hero h2 {
+  display: inline-block;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.3rem;
+  animation: slideIn 2s ease forwards;
+  font-size: 5vh;
+}
+
+main {
+  max-width: 102rem;
+  margin: 0 auto;
+  padding: 0 3rem;
 }
 
 h1 {
@@ -72,8 +94,55 @@ h1 {
   font-weight: 100;
   margin-bottom: 4rem;
 }
+
 h3 {
-  font-size: 1, 6rem;
+  font-size: 6rem;
+  color: black;
+  margin-bottom: 2rem;
+}
+h1.head2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: -9rem; /* Geringerer Abstand nach unten */
+}
+
+h6.intro {
+  font-size: 1.6rem;
+  font-weight: 100;
+  margin-bottom: 2rem; /* Geringerer Abstand nach unten */
+}
+
+
+a.button {
+  text-transform: uppercase;
+  background: #000;
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 1rem 3rem;
+  transition: transform 0.5s ease-in-out;
+  border-radius: 5px;
+  align-self: flex-end;
+}
+
+a.button:hover {
+  transform: scale(1.05);
+  box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.38);
+  font-weight: bold;
+}
+
+main {
+  max-width: 102rem; /* Maximale Breite */
+  margin: 0 auto; /* Zentrieren von main */
+  padding: 0 3rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 6rem;
   color: black;
 }
 
@@ -95,6 +164,14 @@ a.button:hover {
   box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.38);
 }
 
+h4 {
+  font-size: 1.4rem;
+}
+h6 {
+  padding: 5rem 3rem;
+  padding-top: -5vh;
+}
+
 .article-section {
   padding: 0 3rem;
   display: flex;
@@ -106,7 +183,7 @@ a.button:hover {
 
 article {
   height: 40rem;
-  width: 30rem;
+  width: 28rem;
   padding: 30px;
   font-size: 12px;
   color: #fff;
@@ -196,58 +273,52 @@ article {
 article h2 {
   padding-right: 4rem;
 }
-.article-1 > h2 {
+.article-1 > h4 {
   color: white;
   background-color: rgba(0, 0, 0, 0.2);
   padding: 0.3rem;
 }
-.article-2 > h2 {
+.article-2 > h4 {
   color: white;
   bbackground-color: rgba(0, 0, 0, 1);
   padding: 0.3rem;
 }
-.article-3 > h2 {
+.article-3 > h4 {
   color: white;
   background-color: rgba(0, 0, 0, 0.2);
   padding: 0.3rem;
 }
-.article- > h2 {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.2);
-  padding: 0.3rem;
-}
-
-.article-4 > h2 {
+.article- > h4 {
   color: white;
   background-color: rgba(0, 0, 0, 0.2);
   padding: 0.3rem;
 }
 
-.article-5 > h2 {
+.article-4 > h4 {
   color: white;
   background-color: rgba(0, 0, 0, 0.2);
   padding: 0.3rem;
 }
 
-.article-6 > h2 {
+.article-5 > h4 {
   color: white;
   background-color: rgba(0, 0, 0, 0.2);
   padding: 0.3rem;
 }
 
-.article-7 > h2 {
+.article-6 > h4 {
   color: white;
   background-color: rgba(0, 0, 0, 0.2);
   padding: 0.3rem;
 }
 
-.article-8 > h2 {
+.article-7 > h4 {
   color: white;
   background-color: rgba(0, 0, 0, 0.2);
   padding: 0.3rem;
 }
 
-.article-4 > h2 {
+.article-8 > h4 {
   color: white;
   background-color: rgba(0, 0, 0, 0.2);
   padding: 0.3rem;
@@ -266,9 +337,152 @@ article h2 {
   box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.25);
 }
 
+/* langsame sichtbarkeit */
+article {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+article.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* langsame sichtbarkeit */
+
+.grid-container div {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.grid-container div.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.icons {
+  display: flex;
+  gap: 10px; /* Adjust gap as needed */
+  padding-right: 10rem;
+  transition: transform 0.3s ease-in-out; /* Adjust transition duration */
+}
+
+.icons i {
+  font-size: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out; /* Add transition to icons */
+}
+
+.icons i:hover {
+  transform: scale(1.2);
+}
+
+.textfooter {
+  padding-left: 10rem;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8rem;
+  font-size: 1.5rem;
+  background: black;
+  color: white;
+  margin-top: 10vh;
+}
+
+.article-1 {
+  background-image: url("./images/Bildschirmfoto\ vom\ 2024-10-07\ 19-32-04.png");
+}
+
+.article-2 {
+  background-image: url("./images/0df81f02-aef7-4501-a18e-574a3728676f.__CR0\,0\,600\,450_PT0_SX600_V1___.jpg");
+}
+
+.article-3 {
+  background-image: url("./images/Bildschirmfoto\ vom\ 2024-10-07\ 19-33-17.png");
+}
+
+.article-4 {
+  background-image: url("./images/Beosound_A9_5th_Gen._0010_Sound_And_Vision_For_Your_Home_364bff60-b4a1-4be7-b139-3f046200e5c4.webp");
+}
+
+.article-5 {
+  background-image: url("./images/sound5.png");
+}
+
+.article-6 {
+  background-image: url("./images/sound6.png");
+}
+
+.article-7 {
+  background-image: url("./images/sound7.jpg");
+}
+.article-8 {
+  background-image: url("./images/IMG_2865.jpg");
+}
+.article-9 {
+  background-image: url("./images/Beosound_Shape_-_0100_-_Image.jpg");
+}
+
+.article-1:hover {
+  transform: scale(1.05);
+  box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.38);
+}
+.article-2:hover {
+  transform: scale(1.05);
+  box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.38);
+}
+.article-3:hover {
+  transform: scale(1.05);
+  box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.38);
+}
+.article-4:hover {
+  transform: scale(1.05);
+  box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.38);
+}
+.article-5:hover {
+  transform: scale(1.05);
+  box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.38);
+}
+.article-6:hover {
+  transform: scale(1.05);
+  box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.38);
+}
+
+.article-7:hover {
+  transform: scale(1.05);
+  box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.38);
+}
+
+.article-8:hover {
+  transform: scale(1.05);
+  box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.38);
+}
+.article-9:hover {
+  transform: scale(1.05);
+  box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.38);
+}
+
+.article-section .icon {
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background: #fff;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  color: black;
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
 .head2 {
   padding: 5rem 3rem;
-  padding-top: 7vh;
 }
 .grid-container {
   display: grid;
@@ -317,6 +531,7 @@ article h2 {
   text-shadow: 2px 2px 2px #000000;
   border-radius: 5px;
 }
+
 .item4 {
   grid-column: 2 / 3;
   grid-row: 2 / 4;
@@ -324,11 +539,7 @@ article h2 {
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-}
-.item4-text p {
-  /* Schriftgröße passt sich dem Bildschirm an */
-  font-size: clamp(0.2rem, 1rem, 2rem); /* Min 0.2rem, optimal 2vw, max 3rem */
-  color: rgb(0, 0, 0);
+  position: relative; /* Positionierung für die Animation */
 }
 
 .item5 {
@@ -338,6 +549,7 @@ article h2 {
   text-shadow: 2px 2px 2px #000000;
   border-radius: 5px;
 }
+
 .item6 {
   grid-column: 3 / 5;
   grid-row: 3 / 4;
@@ -345,6 +557,7 @@ article h2 {
   text-shadow: 2px 2px 2px #000000;
   border-radius: 5px;
 }
+
 .item7 {
   grid-column: 1 / 2;
   grid-row: 4 / 5;
@@ -352,6 +565,7 @@ article h2 {
   text-shadow: 2px 2px 2px #000000;
   border-radius: 5px;
 }
+
 .item8 {
   grid-column: 2/ 4;
   grid-row: 4 / 5;
@@ -359,23 +573,13 @@ article h2 {
   text-shadow: 2px 2px 2px #000000;
   border-radius: 5px;
 }
+
 .item9 {
   grid-column: 4/ 5;
   grid-row: 4 / 5;
   background-image: url(./images/konzert/orchestra-7265635_1280.jpg);
   text-shadow: 2px 2px 2px #000000;
   border-radius: 5px;
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 8rem;
-  font-size: 1.5rem;
-  background: black;
-  color: white;
-  margin-top: 10vh;
 }
 
 /* langsame sichtbarkeit */
@@ -403,24 +607,29 @@ article.visible {
   transform: translateY(0);
 }
 
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* Center icons vertically */
+@keyframes slideIn {
+  from {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
-
 .icons {
   display: flex;
-  gap: 10px; /* Adjust gap as needed */
+  gap: 10px;
   padding-right: 10rem;
-  transition: transform 0.3s ease-in-out; /* Adjust transition duration */
+  margin-right: 10vw;
+  transition: transform 0.3s ease-in-out;
 }
 
 .icons i {
   font-size: 20px;
   color: #ffffff;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out; /* Add transition to icons */
+  transition: transform 0.3s ease-in-out;
 }
 
 .icons i:hover {
@@ -428,5 +637,16 @@ footer {
 }
 
 .textfooter {
-  padding-left: 10rem;
+  padding-left: 10vw;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8rem;
+  font-size: 1.5rem;
+  background: black;
+  color: white;
+  margin-top: 10vh;
 }
